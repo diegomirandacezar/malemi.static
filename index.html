@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MALEMI — Tecnologia, Dados, Automação &amp; Inteligência Artificial</title>
+  
+  <meta name="description" content="A MALEMI transforma tecnologia, dados e automação em soluções sob medida que ajudam empresas a evoluir com segurança, clareza e eficiência.">
+  <meta name="keywords" content="MALEMI, tecnologia para empresas, business intelligence, automação de processos, inteligência artificial corporativa, desenvolvimento de sites profissionais, dashboards e dados, IA para negócios">
+  <meta name="author" content="MALEMI">
+  <meta name="theme-color" content="#05070B">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://malemi.com.br">
+  <meta property="og:site_name" content="MALEMI">
+  <meta property="og:title" content="MALEMI — Tecnologia, Dados, Automação &amp; Inteligência Artificial">
+  <meta property="og:description" content="Soluções em tecnologia, dados e automação pensadas sob medida para acelerar a evolução da sua empresa.">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MALEMI — Tecnologia, Dados, Automação &amp; Inteligência Artificial">
+  <meta name="twitter:description" content="Soluções em tecnologia, dados e automação pensadas sob medida para acelerar a evolução da sua empresa.">
+
+  <!-- Favicon oficial -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Tailwind CSS via CDN com configuração oficial dos tokens da MALEMI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'bg-main': '#05070B',
+            'bg-surface': '#080C14',
+            'bg-card': '#0F1728',
+            'bg-card-hover': '#142036',
+            'accent-emerald': '#09CCA2',
+            'accent-emerald-hover': '#10dfb3',
+            'tech-blue': '#1D4ED8',
+            'tech-cyan': '#38BDF8',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Customizados Dark Luxury -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Dados Estruturados Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MALEMI",
+    "url": "https://malemi.com.br",
+    "description": "A MALEMI transforma tecnologia, dados e automação em soluções que ajudam empresas a evoluir.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contato@malemi.com.br",
+      "contactType": "customer support",
+      "availableLanguage": ["Portuguese"]
+    },
+    "knowsAbout": [
+      "Desenvolvimento Web e Plataformas",
+      "Business Intelligence e Análise de Dados",
+      "Automação de Processos",
+      "Inteligência Artificial"
+    ]
+  }
+  </script>
+</head>
+<body class="min-h-screen bg-[#05070B] text-slate-100 font-sans selection:bg-[#09CCA2]/20 selection:text-[#09CCA2] antialiased">
+
+  <!-- Link de Acessibilidade Pular para o Conteúdo (WCAG 2.1) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#09CCA2] focus:text-[#05070B] focus:font-semibold focus:rounded-lg focus:shadow-lg focus:outline-none">
+    Pular para o conteúdo principal
+  </a>
+
+  <!-- ==============================================================================
+       HEADER / NAVEGAÇÃO SUPERIOR
+       ============================================================================== -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logotipo da Marca MALEMI -->
+        <a href="#" class="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-[#09CCA2]/40 rounded-lg p-1" aria-label="MALEMI Página Inicial">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#09CCA2] to-[#1D4ED8] p-[1.5px] transition-transform duration-300 group-hover:scale-105">
+            <div class="w-full h-full bg-[#05070B] rounded-[6.5px] flex items-center justify-center">
+              <span class="font-extrabold text-sm tracking-wider text-white">
+                M<span class="text-[#09CCA2]">.</span>
+              </span>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold tracking-widest text-white leading-none">MALEMI</span>
+            <span class="text-[9px] uppercase tracking-[0.2em] text-slate-400 font-medium mt-0.5">Tech &amp; Data</span>
+          </div>
+        </a>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex items-center gap-8" aria-label="Navegação Principal">
+          <a href="#solucoes" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 relative py-1 hover:after:w-full after:w-0 after:h-[2px] after:bg-[#09CCA2] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200">
+            Soluções
+          </a>
+          <a href="#sobre" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 relative py-1 hover:after:w-full after:w-0 after:h-[2px] after:bg-[#09CCA2] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200">
+            Sobre a MALEMI
+          </a>
+          <a href="#metodologia" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 relative py-1 hover:after:w-full after:w-0 after:h-[2px] after:bg-[#09CCA2] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200">
+            Como Trabalhamos
+          </a>
+          <a href="#diferenciais" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 relative py-1 hover:after:w-full after:w-0 after:h-[2px] after:bg-[#09CCA2] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200">
+            Diferenciais
+          </a>
+          <a href="#contato" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 relative py-1 hover:after:w-full after:w-0 after:h-[2px] after:bg-[#09CCA2] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200">
+            Contato
+          </a>
+        </nav>
+
+        <!-- Botão CTA Desktop -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#contato" class="btn-primary text-xs py-2 px-4">
+            <span>Fale conosco</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Botão Menu Mobile Hamburguer -->
+        <div class="flex md:hidden items-center">
+          <button id="mobile-menu-toggle" type="button" class="p-2 text-slate-300 hover:text-white rounded-lg border border-white/10 bg-white/5 focus:outline-none focus:ring-2 focus:ring-[#09CCA2]" aria-expanded="false" aria-label="Abrir menu de navegação">
+            <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Dropdown Mobile -->
+      <div id="mobile-menu" class="hidden md:hidden mt-3 pt-4 pb-6 px-4 bg-[#0A0F1A]/95 border border-white/10 rounded-2xl backdrop-blur-xl shadow-2xl flex flex-col gap-4">
+        <nav class="flex flex-col gap-3" aria-label="Navegação Mobile">
+          <a href="#solucoes" class="px-3 py-2 text-base font-medium text-slate-200 hover:text-[#09CCA2] rounded-lg hover:bg-white/5 transition-colors">Soluções</a>
+          <a href="#sobre" class="px-3 py-2 text-base font-medium text-slate-200 hover:text-[#09CCA2] rounded-lg hover:bg-white/5 transition-colors">Sobre a MALEMI</a>
+          <a href="#metodologia" class="px-3 py-2 text-base font-medium text-slate-200 hover:text-[#09CCA2] rounded-lg hover:bg-white/5 transition-colors">Como Trabalhamos</a>
+          <a href="#diferenciais" class="px-3 py-2 text-base font-medium text-slate-200 hover:text-[#09CCA2] rounded-lg hover:bg-white/5 transition-colors">Diferenciais</a>
+          <a href="#contato" class="px-3 py-2 text-base font-medium text-slate-200 hover:text-[#09CCA2] rounded-lg hover:bg-white/5 transition-colors">Contato</a>
+        </nav>
+        <div class="pt-2 border-t border-white/10">
+          <a href="#contato" class="btn-primary w-full text-center">
+            <span>Fale conosco</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================================================================
+       CONTEÚDO PRINCIPAL
+       ============================================================================== -->
+  <main id="main-content" class="flex-1 focus:outline-none">
+
+    <!-- --------------------------------------------------------------------------
+         1. HERO SECTION
+         -------------------------------------------------------------------------- -->
+    <section class="relative min-h-[92vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-[#05070B]">
+      
+      <!-- Canvas Dinâmico de Rede Digital & Nós Conectados -->
+      <canvas id="tech-canvas" class="absolute inset-0 pointer-events-none w-full h-full opacity-60 transition-opacity duration-700" aria-hidden="true"></canvas>
+
+      <!-- Iluminação Discreta / Radial Glows -->
+      <div class="hero-glow-blue"></div>
+      <div class="hero-glow-emerald"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+          
+          <!-- Eyebrow Pill -->
+          <div class="mb-6">
+            <span class="badge-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+              <span>Tecnologia &bull; Dados &bull; Automação &bull; IA</span>
+            </span>
+          </div>
+
+          <!-- Headline Principal -->
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+            A tecnologia certa, te levará a <span class="text-gradient-accent">novas oportunidades!</span>
+          </h1>
+
+          <!-- Subtítulo / Proposta de Valor -->
+          <p class="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed mb-10 font-normal">
+            A <strong class="text-white font-medium">MALEMI</strong> transforma tecnologia, dados e automação em soluções sob medida que ajudam empresas a evoluir com segurança, clareza e eficiência.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16">
+            <a href="#solucoes" class="btn-primary w-full sm:w-auto text-base py-3.5 px-6">
+              <span>Conheça nossas soluções</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#contato" class="btn-secondary w-full sm:w-auto text-base py-3.5 px-6">
+              <span>Fale com a MALEMI</span>
+            </a>
+          </div>
+
+          <!-- Barra de Destaques de Tecnologia (Sem fotos genéricas de banco) -->
+          <div class="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10 text-left">
+            <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3.5 hover:border-[#09CCA2]/30 transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-[#1D4ED8]/20 border border-[#1D4ED8]/40 flex items-center justify-center shrink-0 text-sky-400">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <div>
+                <h2 class="text-sm font-semibold text-white">MALEMI Sites</h2>
+                <p class="text-xs text-slate-400 mt-0.5">Plataformas e presença digital de alto impacto</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3.5 hover:border-[#09CCA2]/30 transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-[#09CCA2]/20 border border-[#09CCA2]/40 flex items-center justify-center shrink-0 text-[#09CCA2]">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+              </div>
+              <div>
+                <h2 class="text-sm font-semibold text-white">MALEMI BI</h2>
+                <p class="text-xs text-slate-400 mt-0.5">Indicadores visuais para decisões assertivas</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3.5 hover:border-[#09CCA2]/30 transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-indigo-900/30 border border-indigo-500/30 flex items-center justify-center shrink-0 text-indigo-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 14h3"/><path d="M1 9h3"/><path d="M1 14h3"/></svg>
+              </div>
+              <div>
+                <h2 class="text-sm font-semibold text-white">Automação & IA</h2>
+                <p class="text-xs text-slate-400 mt-0.5">Processos integrados e fluxos inteligentes</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         2. APRESENTAÇÃO INSTITUCIONAL / SOBRE A MALEMI
+         -------------------------------------------------------------------------- -->
+    <section id="sobre" class="py-24 bg-[#080C14] border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="badge-pill mb-4">Sobre a MALEMI</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            Tecnologia aplicada com foco no que <span class="text-gradient-accent">realmente importa</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-400 leading-relaxed">
+            Acreditamos que a tecnologia mais sofisticada é aquela que simplifica o dia a dia e gera resultados mensuráveis para sua operação.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Card de Missão e Propósito -->
+          <div class="lg:col-span-7">
+            <div class="card-luxury h-full flex flex-col justify-between p-8 sm:p-10 border-white/10 bg-gradient-to-b from-[#0F1728] to-[#0A0F1A]">
+              <div class="space-y-6">
+                <div class="inline-block px-3 py-1 rounded bg-[#09CCA2]/10 border border-[#09CCA2]/20 text-[#09CCA2] text-xs font-semibold tracking-wider uppercase">
+                  Nossa Missão
+                </div>
+                <blockquote class="text-2xl sm:text-3xl font-semibold text-white leading-snug">
+                  &ldquo;A MALEMI transforma tecnologia, dados e automação em soluções que ajudam empresas a evoluir.&rdquo;
+                </blockquote>
+                <p class="text-base text-slate-300 leading-relaxed">
+                  Não acreditamos em tecnologia pela tecnologia. Nosso compromisso é identificar onde a engenharia de software, a organização de dados e a inteligência artificial podem desatar nós operacionais, acelerar atendimentos e fornecer clareza executiva.
+                </p>
+                <p class="text-base text-slate-300 leading-relaxed">
+                  Trabalhamos de forma transparente, desenvolvendo soluções sustentáveis, seguras e prontas para crescer junto com os objetivos do seu negócio.
+                </p>
+              </div>
+
+              <div class="pt-8 mt-6 border-t border-white/10 flex flex-wrap items-center gap-4 text-xs text-slate-400">
+                <span class="flex items-center gap-1.5 text-[#09CCA2] font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#09CCA2]"></span> Engenharia Sob Medida
+                </span>
+                <span class="flex items-center gap-1.5 text-sky-400 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Decisão Baseada em Dados
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pilares de Atuação -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="card-luxury p-6 bg-[#0A0F1A] border-white/10 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-[#09CCA2]/15 border border-[#09CCA2]/30 text-[#09CCA2] flex items-center justify-center shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-white">Objetividade Comercial</h3>
+                <p class="text-sm text-slate-400 mt-1 leading-relaxed">
+                  Entregamos o que seu negócio realmente precisa hoje, estruturando uma base sólida que permite expansões futuras sem retrabalho.
+                </p>
+              </div>
+            </div>
+
+            <div class="card-luxury p-6 bg-[#0A0F1A] border-white/10 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-[#1D4ED8]/20 border border-[#1D4ED8]/40 text-sky-400 flex items-center justify-center shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-white">Arquitetura Integrada</h3>
+                <p class="text-sm text-slate-400 mt-1 leading-relaxed">
+                  Seus canais de atendimento, painéis de decisão e processos internos conversam harmonicamente em um ecossistema conectado.
+                </p>
+              </div>
+            </div>
+
+            <div class="card-luxury p-6 bg-[#0A0F1A] border-white/10 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-white">Confiança & Segurança</h3>
+                <p class="text-sm text-slate-400 mt-1 leading-relaxed">
+                  Padrões rigorosos de desenvolvimento com proteção aos dados sensíveis da sua organização e estabilidade de longo prazo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         3. PRODUTOS E SOLUÇÕES COM ABAS E PLANOS DINÂMICOS
+         -------------------------------------------------------------------------- -->
+    <section id="solucoes" class="py-24 bg-[#05070B] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="badge-pill mb-4">Nossos Produtos</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            Soluções <span class="text-gradient-accent">estruturadas</span> para impulsionar sua empresa
+          </h2>
+          <p class="text-base sm:text-lg text-slate-400 leading-relaxed">
+            Conheça os três pilares de atuação da MALEMI: criação de plataformas digitais, inteligência em dados e automação com inteligência artificial.
+          </p>
+        </div>
+
+        <!-- Seletor de Abas das Soluções -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-14" role="tablist">
+          <button type="button" role="tab" data-solution="sites" onclick="renderSolutionDetails('sites')" class="tab-solution-btn flex items-center gap-3 px-5 py-3.5 rounded-xl font-medium text-sm transition-all duration-200 cursor-pointer border bg-[#0F1728] border-[#09CCA2] text-white shadow-[0_0_20px_rgba(9,204,162,0.15)]" aria-selected="true">
+            <span class="tab-icon text-[#09CCA2]">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </span>
+            <span>MALEMI Sites</span>
+          </button>
+
+          <button type="button" role="tab" data-solution="bi" onclick="renderSolutionDetails('bi')" class="tab-solution-btn flex items-center gap-3 px-5 py-3.5 rounded-xl font-medium text-sm transition-all duration-200 cursor-pointer border bg-[#0A0F1A]/80 border-white/10 text-slate-400 hover:text-white hover:border-white/20" aria-selected="false">
+            <span class="tab-icon text-slate-400">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            </span>
+            <span>MALEMI BI</span>
+          </button>
+
+          <button type="button" role="tab" data-solution="automacao-ia" onclick="renderSolutionDetails('automacao-ia')" class="tab-solution-btn flex items-center gap-3 px-5 py-3.5 rounded-xl font-medium text-sm transition-all duration-200 cursor-pointer border bg-[#0A0F1A]/80 border-white/10 text-slate-400 hover:text-white hover:border-white/20" aria-selected="false">
+            <span class="tab-icon text-slate-400">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 14h3"/><path d="M1 9h3"/><path d="M1 14h3"/></svg>
+            </span>
+            <span>MALEMI Automação &amp; IA</span>
+          </button>
+        </div>
+
+        <!-- Vitrine da Solução Selecionada -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+          
+          <!-- Card de Visão Geral do Produto -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="card-luxury p-8 border-white/10 bg-gradient-to-b from-[#0F1728] to-[#0A0F1A]">
+              <div id="solution-icon-container" class="w-12 h-12 rounded-xl bg-[#09CCA2]/15 border border-[#09CCA2]/30 text-[#09CCA2] flex items-center justify-center mb-5">
+                <!-- Ícone dinâmico -->
+              </div>
+              <h3 id="solution-title" class="text-2xl sm:text-3xl font-bold text-white mb-1">
+                MALEMI Sites
+              </h3>
+              <p id="solution-tagline" class="text-sm font-medium text-[#09CCA2] uppercase tracking-wider mb-4">
+                Presença Digital de Alta Performance
+              </p>
+              <p id="solution-desc" class="text-base text-slate-300 leading-relaxed mb-6">
+                Soluções para criação de sites institucionais e plataformas digitais com design refinado, arquitetura escalável e máxima velocidade de carregamento.
+              </p>
+
+              <div class="p-4 rounded-lg bg-white/[0.03] border border-white/10 mb-6">
+                <h4 class="text-xs uppercase font-semibold tracking-wider text-slate-200 mb-1">
+                  Problema que resolve
+                </h4>
+                <p id="solution-problem" class="text-sm text-slate-400 leading-relaxed">
+                  Supera a baixa taxa de conversão e a falta de autoridade de páginas lentas ou genéricas, criando canais digitais que transmitem credibilidade imediata.
+                </p>
+              </div>
+
+              <div class="pt-2 mb-6">
+                <h4 class="text-xs uppercase font-semibold tracking-wider text-slate-200 mb-3">
+                  Principais Recursos
+                </h4>
+                <ul id="solution-features-list" class="space-y-2.5">
+                  <!-- Injetado via JS -->
+                </ul>
+              </div>
+
+              <div class="pt-4 border-t border-white/10">
+                <button id="solution-cta-btn" type="button" class="btn-primary w-full text-sm">
+                  <span>Conheça a solução</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabela de Planos (Essencial, Profissional, Premium) -->
+          <div class="lg:col-span-7">
+            <div class="mb-4 flex items-center justify-between">
+              <div>
+                <h4 class="text-lg font-semibold text-white">Planos Disponíveis</h4>
+                <p class="text-xs text-slate-400">Estrutura transparente adaptada ao momento da sua empresa</p>
+              </div>
+              <span id="plans-solution-name" class="text-xs text-slate-400 font-mono">MALEMI Sites</span>
+            </div>
+
+            <!-- Grade com os 3 Planos -->
+            <div id="plans-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- Cards dos Planos renderizados via JS -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         4. COMO A MALEMI TRABALHA (METODOLOGIA)
+         -------------------------------------------------------------------------- -->
+    <section id="metodologia" class="py-24 bg-[#080C14] border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="badge-pill mb-4">Como Trabalhamos</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            Metodologia <span class="text-gradient-accent">transparente</span> do diagnóstico à entrega
+          </h2>
+          <p class="text-base sm:text-lg text-slate-400 leading-relaxed">
+            Um processo estruturado em quatro etapas bem definidas, assegurando previsibilidade técnica, respeito aos prazos e evolução consistente.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Etapa 01 -->
+          <div class="card-luxury flex flex-col justify-between p-6 sm:p-7 bg-[#0A0F1A] border-white/10">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-2xl font-bold text-[#09CCA2]/80 tracking-wider">01</span>
+                <div class="w-2 h-2 rounded-full bg-[#09CCA2]/40"></div>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Diagnóstico &amp; Imersão</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                Analisamos a realidade operacional da sua empresa, identificando gargalos, estrutura de dados e oportunidades claras onde a tecnologia traz maior retorno.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5">
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 block mb-1">Entrega principal:</span>
+              <span class="text-xs text-slate-300 font-medium leading-snug">Mapeamento de desafios e direcionamento inicial</span>
+            </div>
+          </div>
+
+          <!-- Etapa 02 -->
+          <div class="card-luxury flex flex-col justify-between p-6 sm:p-7 bg-[#0A0F1A] border-white/10">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-2xl font-bold text-[#09CCA2]/80 tracking-wider">02</span>
+                <div class="w-2 h-2 rounded-full bg-[#09CCA2]/40"></div>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Estratégia &amp; Arquitetura</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                Desenhamos a solução sob medida com a tecnologia e ferramentas certas para o seu estágio, sem excessos de complexidade ou custos desnecessários.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5">
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 block mb-1">Entrega principal:</span>
+              <span class="text-xs text-slate-300 font-medium leading-snug">Plano técnico objetivo e cronograma alinhado</span>
+            </div>
+          </div>
+
+          <!-- Etapa 03 -->
+          <div class="card-luxury flex flex-col justify-between p-6 sm:p-7 bg-[#0A0F1A] border-white/10">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-2xl font-bold text-[#09CCA2]/80 tracking-wider">03</span>
+                <div class="w-2 h-2 rounded-full bg-[#09CCA2]/40"></div>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Desenvolvimento Ágil</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                Implementamos a solução com padrões rigorosos de engenharia, foco em velocidade, segurança da informação e validações intermediárias.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5">
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 block mb-1">Entrega principal:</span>
+              <span class="text-xs text-slate-300 font-medium leading-snug">Construção iterativa com testes e refinamento</span>
+            </div>
+          </div>
+
+          <!-- Etapa 04 -->
+          <div class="card-luxury flex flex-col justify-between p-6 sm:p-7 bg-[#0A0F1A] border-white/10">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-2xl font-bold text-[#09CCA2]/80 tracking-wider">04</span>
+                <div class="w-2 h-2 rounded-full bg-[#09CCA2]/40"></div>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Implantação &amp; Suporte</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                Realizamos a entrega assistida, parametrização dos fluxos, capacitação da sua equipe e fornecemos base sólida para a evolução contínua.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5">
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 block mb-1">Entrega principal:</span>
+              <span class="text-xs text-slate-300 font-medium leading-snug">Solução operando em produção com suporte</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         5. DIFERENCIAIS MALEMI
+         -------------------------------------------------------------------------- -->
+    <section id="diferenciais" class="py-24 bg-[#05070B] border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="badge-pill mb-4">Diferenciais MALEMI</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            Por que escolher a <span class="text-gradient-accent">MALEMI</span> para o seu projeto?
+          </h2>
+          <p class="text-base sm:text-lg text-slate-400 leading-relaxed">
+            Nossa abordagem combina rigor técnico com pragmatismo de negócios para que cada entrega gere valor real e duradouro.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          
+          <div class="card-luxury p-8 bg-gradient-to-br from-[#0F1728] to-[#0A0F1A] border-white/10">
+            <div class="w-12 h-12 rounded-xl bg-[#09CCA2]/10 border border-[#09CCA2]/25 text-[#09CCA2] flex items-center justify-center mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2.5">Engenharia Sob Medida</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Evitamos fórmulas prontas e pacotes engessados. Cada projeto é estruturado conforme o porte e as necessidades reais da sua operação.
+            </p>
+          </div>
+
+          <div class="card-luxury p-8 bg-gradient-to-br from-[#0F1728] to-[#0A0F1A] border-white/10">
+            <div class="w-12 h-12 rounded-xl bg-[#09CCA2]/10 border border-[#09CCA2]/25 text-[#09CCA2] flex items-center justify-center mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2.5">Pragmatismo &amp; Foco em Resultado</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Tecnologia só tem valor se resolver problemas reais. Direcionamos nosso trabalho para ganhos práticos de tempo, eficiência e clareza de decisão.
+            </p>
+          </div>
+
+          <div class="card-luxury p-8 bg-gradient-to-br from-[#0F1728] to-[#0A0F1A] border-white/10">
+            <div class="w-12 h-12 rounded-xl bg-[#09CCA2]/10 border border-[#09CCA2]/25 text-[#09CCA2] flex items-center justify-center mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2.5">Integração &amp; Solidez de Ponta a Ponta</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Conectamos canais digitais, camadas de dados e processos em uma arquitetura limpa, estável e preparada para o crescimento do seu negócio.
+            </p>
+          </div>
+
+          <div class="card-luxury p-8 bg-gradient-to-br from-[#0F1728] to-[#0A0F1A] border-white/10">
+            <div class="w-12 h-12 rounded-xl bg-[#09CCA2]/10 border border-[#09CCA2]/25 text-[#09CCA2] flex items-center justify-center mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2.5">Comunicação Clara e Transparente</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Traduzimos conceitos técnicos complexos para a linguagem dos seus negócios. Sem jargões confusos, prazos obscuros ou promessas irreais.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         6. SEÇÃO DE CONTATO E CONVERSÃO
+         -------------------------------------------------------------------------- -->
+    <section id="contato" class="py-24 bg-[#080C14] border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="badge-pill mb-4">Fale com a MALEMI</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            Pronto para <span class="text-gradient-accent">transformar</span> sua tecnologia e dados?
+          </h2>
+          <p class="text-base sm:text-lg text-slate-400 leading-relaxed">
+            Entre em contato com nossa equipe técnica para avaliar seu cenário e desenhar uma proposta alinhada à sua realidade.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Canais Diretos -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="card-luxury p-8 bg-[#0A0F1A] border-white/10">
+              <h3 class="text-xl font-bold text-white mb-3">Vamos conversar</h3>
+              <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                Nosso atendimento é direto e voltado a entender seu desafio de negócio. Sem intermediários ou discursos prontos.
+              </p>
+
+              <div class="space-y-4 pt-4 border-t border-white/10">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-[#09CCA2]/10 border border-[#09CCA2]/20 text-[#09CCA2] flex items-center justify-center shrink-0">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase tracking-wider text-slate-400 block font-semibold">E-mail Direto</span>
+                    <a href="mailto:contato@malemi.com.br" class="text-sm text-slate-200 hover:text-[#09CCA2] transition-colors">
+                      contato@malemi.com.br
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-[#1D4ED8]/10 border border-[#1D4ED8]/20 text-sky-400 flex items-center justify-center shrink-0">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase tracking-wider text-slate-400 block font-semibold">Atendimento Corporativo</span>
+                    <span class="text-sm text-slate-300">Segunda a Sexta &bull; 09h às 18h</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/5 flex flex-col gap-2">
+                <button type="button" onclick="copyEmailToClipboard()" class="btn-secondary text-xs w-full py-2">
+                  <span>Copiar E-mail (contato@malemi.com.br)</span>
+                </button>
+                <span id="copy-feedback" class="text-[11px] text-[#09CCA2] text-center hidden">E-mail copiado!</span>
+              </div>
+
+              <div class="mt-6 p-4 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-400 leading-relaxed">
+                <strong class="text-slate-200 block mb-1">Privacidade Garantida:</strong>
+                Seus dados serão utilizados exclusivamente para responder ao seu contato e estruturar seu diagnóstico.
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário Estático Funcional (Netlify Forms Ready + Mailto Direct) -->
+          <div class="lg:col-span-7">
+            <div id="form-container" class="card-luxury p-8 sm:p-10 bg-[#0F1728] border-white/10">
+              <form id="contact-form" name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-5">
+                
+                <!-- Campos ocultos para Netlify Forms e antispam -->
+                <input type="hidden" name="form-name" value="contato">
+                <p class="hidden">
+                  <label>Não preencha: <input name="bot-field"></label>
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">
+                      Nome Completo *
+                    </label>
+                    <input id="name" name="name" type="text" required placeholder="Seu nome" class="w-full px-4 py-3 rounded-lg bg-[#0A0F1A] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#09CCA2] focus:ring-1 focus:ring-[#09CCA2] transition-colors">
+                  </div>
+
+                  <div>
+                    <label for="email" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">
+                      E-mail Corporativo *
+                    </label>
+                    <input id="email" name="email" type="email" required placeholder="seu@empresa.com.br" class="w-full px-4 py-3 rounded-lg bg-[#0A0F1A] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#09CCA2] focus:ring-1 focus:ring-[#09CCA2] transition-colors">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="company" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">
+                      Nome da Empresa
+                    </label>
+                    <input id="company" name="company" type="text" placeholder="Sua empresa ou projeto" class="w-full px-4 py-3 rounded-lg bg-[#0A0F1A] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#09CCA2] focus:ring-1 focus:ring-[#09CCA2] transition-colors">
+                  </div>
+
+                  <div>
+                    <label for="solution" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">
+                      Solução de Interesse *
+                    </label>
+                    <select id="solution" name="solution" class="w-full px-4 py-3 rounded-lg bg-[#0A0F1A] border border-white/10 text-white text-sm focus:outline-none focus:border-[#09CCA2] focus:ring-1 focus:ring-[#09CCA2] transition-colors">
+                      <option value="sites">MALEMI Sites (Web &amp; Plataformas)</option>
+                      <option value="bi">MALEMI BI (Dados &amp; Dashboards)</option>
+                      <option value="automacao-ia">MALEMI Automação &amp; IA</option>
+                      <option value="multiplas">Múltiplas Soluções / Diagnóstico Geral</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">
+                    Como podemos ajudar? *
+                  </label>
+                  <textarea id="message" name="message" rows="4" required placeholder="Descreva brevemente o desafio ou objetivo do seu projeto..." class="w-full px-4 py-3 rounded-lg bg-[#0A0F1A] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#09CCA2] focus:ring-1 focus:ring-[#09CCA2] transition-colors resize-none"></textarea>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit" class="btn-primary w-full text-base py-3.5">
+                    <span>Solicitar Contato Especializado</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================================================
+       RODAPÉ INSTITUCIONAL (FOOTER)
+       ============================================================================== -->
+  <footer class="bg-[#030407] border-t border-white/10 pt-16 pb-12 relative overflow-hidden">
+    <!-- Brilho ambiental sutil -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-64 bg-[#09CCA2]/[0.02] blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-white/5">
+        
+        <!-- Coluna 1: Perfil da Empresa -->
+        <div class="md:col-span-1 space-y-4">
+          <a href="#" class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#09CCA2] to-[#1D4ED8] p-[1px]">
+              <div class="w-full h-full bg-[#05070B] rounded-[7px] flex items-center justify-center">
+                <span class="font-extrabold text-xs text-white">
+                  M<span class="text-[#09CCA2]">.</span>
+                </span>
+              </div>
+            </div>
+            <span class="text-xl font-bold tracking-widest text-white">MALEMI</span>
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Transformando tecnologia, dados e inteligência artificial em soluções sob medida que ajudam empresas a evoluir com segurança e eficiência.
+          </p>
+          <div class="pt-2 flex flex-col gap-2 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#09CCA2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>contato@malemi.com.br</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#09CCA2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Atendimento Corporativo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Soluções -->
+        <div>
+          <h3 class="text-xs uppercase tracking-wider text-slate-200 font-semibold mb-4">Soluções</h3>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="#solucoes" onclick="renderSolutionDetails('sites')" class="hover:text-[#09CCA2] transition-colors duration-200">MALEMI Sites</a></li>
+            <li><a href="#solucoes" onclick="renderSolutionDetails('bi')" class="hover:text-[#09CCA2] transition-colors duration-200">MALEMI BI</a></li>
+            <li><a href="#solucoes" onclick="renderSolutionDetails('automacao-ia')" class="hover:text-[#09CCA2] transition-colors duration-200">MALEMI Automação &amp; IA</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Institucional -->
+        <div>
+          <h3 class="text-xs uppercase tracking-wider text-slate-200 font-semibold mb-4">Institucional</h3>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="#sobre" class="hover:text-[#09CCA2] transition-colors duration-200">Sobre Nós</a></li>
+            <li><a href="#metodologia" class="hover:text-[#09CCA2] transition-colors duration-200">Metodologia</a></li>
+            <li><a href="#diferenciais" class="hover:text-[#09CCA2] transition-colors duration-200">Diferenciais</a></li>
+            <li><a href="#contato" class="hover:text-[#09CCA2] transition-colors duration-200">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Padrões Técnicos -->
+        <div>
+          <h3 class="text-xs uppercase tracking-wider text-slate-200 font-semibold mb-4">Padrões Técnicos</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-3">
+            Desenvolvimento orientado a clean code, acessibilidade digital, máxima performance e proteção de dados.
+          </p>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-[#09CCA2] pulse-indicator"></span>
+            <span>Sistemas &amp; Infraestrutura Ativos</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Créditos e Termos -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>
+          &copy; <span id="current-year">2026</span> MALEMI Soluções em Tecnologia &amp; Dados. Todos os direitos reservados.
+        </p>
+        <div class="flex items-center gap-6">
+          <button type="button" onclick="openModal('modal-termos')" class="hover:text-slate-200 transition-colors">Termos de Uso</button>
+          <button type="button" onclick="openModal('modal-privacidade')" class="hover:text-slate-200 transition-colors">Privacidade &amp; Dados</button>
+          <span class="hidden sm:inline text-slate-400">Tecnologia + Dados + Automação + IA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================================================
+       MODAIS INSTITUCIONAIS
+       ============================================================================== -->
+  
+  <!-- Modal Termos de Uso -->
+  <div id="modal-termos" class="modal-overlay" onclick="if(event.target === this) closeModal('modal-termos')">
+    <div class="modal-content">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+        <h3 class="text-xl font-bold text-white">Termos de Uso — MALEMI</h3>
+        <button type="button" onclick="closeModal('modal-termos')" class="p-1 text-slate-400 hover:text-white rounded-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="text-sm text-slate-300 space-y-3 leading-relaxed">
+        <p>Bem-vindo ao site institucional da MALEMI Tech &amp; Data. O acesso a este portal e a utilização das informações disponibilizadas implicam a aceitação destes termos.</p>
+        <p><strong class="text-white">Propriedade Intelectual:</strong> Todos os logotipos, marcas, layout, textos e códigos presentes neste site são de titularidade exclusiva da MALEMI e protegidos pelas leis de propriedade intelectual.</p>
+        <p><strong class="text-white">Uso das Informações:</strong> As informações comerciais e técnicas apresentadas possuem caráter informativo institucional. Propostas e especificações formais de projetos são emitidas individualmente mediante diagnóstico comercial.</p>
+      </div>
+      <div class="pt-6 mt-6 border-t border-white/10 text-right">
+        <button type="button" onclick="closeModal('modal-termos')" class="btn-primary text-xs py-2 px-4">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Privacidade & Dados -->
+  <div id="modal-privacidade" class="modal-overlay" onclick="if(event.target === this) closeModal('modal-privacidade')">
+    <div class="modal-content">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+        <h3 class="text-xl font-bold text-white">Privacidade &amp; Proteção de Dados (LGPD)</h3>
+        <button type="button" onclick="closeModal('modal-privacidade')" class="p-1 text-slate-400 hover:text-white rounded-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="text-sm text-slate-300 space-y-3 leading-relaxed">
+        <p>A MALEMI preza pela segurança, confidencialidade e privacidade das informações dos seus clientes e visitantes, em estrita conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
+        <p><strong class="text-white">Coleta de Dados:</strong> Os dados fornecidos voluntariamente através do formulário de contato (nome, e-mail, empresa e mensagem) são utilizados exclusivamente para retornar sua solicitação de diagnóstico ou proposta comercial.</p>
+        <p><strong class="text-white">Não Compartilhamento:</strong> Seus dados jamais serão comercializados ou cedidos a terceiros sem seu consentimento expresso.</p>
+        <p><strong class="text-white">Contato do Encarregado:</strong> Dúvidas ou solicitações relativas aos seus dados podem ser direcionadas diretamente para <strong class="text-white">contato@malemi.com.br</strong>.</p>
+      </div>
+      <div class="pt-6 mt-6 border-t border-white/10 text-right">
+        <button type="button" onclick="closeModal('modal-privacidade')" class="btn-primary text-xs py-2 px-4">Concordo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts Vanilla JS -->
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

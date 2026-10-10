@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://malemi.com.br/sitemap.xml
